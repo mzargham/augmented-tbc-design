@@ -176,7 +176,7 @@ export default function App() {
 
         R_t.push(R_next);
         S_t.push(S_next);
-        p_t.push(R_next / S_next);
+        p_t.push(k* R_next ** (1/k) / S_next);
         // Consider withdraw fees on sales only
         if (deltaR < 0) {
           wFee_t.push(getLast(wFee_t) - deltaR * wFee);
